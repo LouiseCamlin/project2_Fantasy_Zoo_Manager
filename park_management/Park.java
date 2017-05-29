@@ -15,7 +15,11 @@ public class Park{
   }
 
   public void addNewEnclosure(Enclosure enclosure) {
-    enclosures.add(enclosure);
+    this.enclosures.add(enclosure);
+  }
+
+  public void emptyEnclosure() {
+    this.enclosures.clear();
   }
 
 
