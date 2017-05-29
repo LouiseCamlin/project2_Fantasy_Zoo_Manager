@@ -6,10 +6,12 @@ public class Park{
 
   private ArrayList<Enclosure> enclosures;
   private ArrayList<Guest> guests;
+  private int entryFee;
 
-  public Park(){
+  public Park(int entryFee){
     this.enclosures = new ArrayList<Enclosure>();
     this.guests = new ArrayList<Guest>();
+    this.entryFee = 25;
   }
 
   public int enclosureCount(){
@@ -38,6 +40,10 @@ public class Park{
 
   public void evacuate() {
     this.guests.clear();
+  }
+
+  public int getEntryFee(){
+    return this.entryFee;
   }
 
 
