@@ -8,14 +8,4 @@ public class Velociraptor extends Dinosaur {
     carnivore = true; 
   }
 
-  // @Override
-  // public boolean eat(Edible food){
-  //   if (carnivore == true) {
-  //     super.eat(food);
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-
 }
