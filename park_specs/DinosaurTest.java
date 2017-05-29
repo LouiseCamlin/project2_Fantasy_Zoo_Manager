@@ -36,13 +36,24 @@ public class DinosaurTest {
   public void canEatGuest(){
     tRex.eatGuest(guest);
     assertEquals(1, tRex.foodCount());
-
   }
 
   @Test
   public void canNotEatGuest(){
     diplodocus.eatGuest(guest);
     assertEquals(0, diplodocus.foodCount());
+  }
+
+  @Test
+  public void canEatPlants(){
+    diplodocus.eatPlant(plant);
+    assertEquals(1, diplodocus.foodCount());
+  }
+
+  @Test
+  public void canNotEatPlants(){
+    tRex.eatPlant(plant);
+    assertEquals(0, tRex.foodCount());
   }
 
  
