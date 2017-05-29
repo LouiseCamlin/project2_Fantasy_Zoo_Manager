@@ -31,6 +31,20 @@ public abstract class Dinosaur{
       return this.hunger;
   }
 
+  public void eatGuest(Guest guest){
+    if(carnivore == true){
+      belly.add(guest);
+    } else {
+      System.out.println("this Dinosaur is a vegetarian");
+    }
+  }
+
+  public int foodCount(){
+    return this.belly.size();
+  }
+
+ 
+
   
 
 
