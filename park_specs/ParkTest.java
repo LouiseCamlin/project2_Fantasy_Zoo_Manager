@@ -6,7 +6,18 @@ public class ParkTest {
 
   Park park;
   Enclosure enclosures;
-  Guest guests;
+  Guest guest1;
+  Guest guest2;
+  Guest guest3;
+  Guest guest4;
+
+  @Before
+  public void before(){
+    guest1 = new Guest("Irma", 50);
+    guest2 = new Guest("Liam", 20);
+    guest3 = new Guest("Paddy", 43);
+    guest4 = new Guest("Louise", 25);
+  }
 
 
   @Test
@@ -31,39 +42,35 @@ public class ParkTest {
   @Test
   public void canAddGuests() {
     Park park = new Park();
-    Guest guest = new Guest();
-    park.addNewGuest(guest);
+    park.addNewGuest(guest1);
     assertEquals(1, park.guestsCount());
   }
 
   @Test
   public void canHaveMoreThanOneGuest() {
     Park park = new Park();
-    Guest guest = new Guest();
-    park.addNewGuest(guest);
-    park.addNewGuest(guest);
-    park.addNewGuest(guest);
-    park.addNewGuest(guest);
+    park.addNewGuest(guest1);
+    park.addNewGuest(guest2);
+    park.addNewGuest(guest3);
+    park.addNewGuest(guest4);
     assertEquals(4, park.guestsCount());
   }
 
   @Test
   public void canRemoveGuestByIndex() {
     Park park = new Park();
-    Guest guest = new Guest();
-    park.addNewGuest(guest);
-    park.addNewGuest(guest);
+    park.addNewGuest(guest1);
+    park.addNewGuest(guest2);
     park.removeGuest(1);
   }
 
   @Test 
   public void canEvacuatePark() {
     Park park = new Park();
-    Guest guest = new Guest();
-    park.addNewGuest(guest);
-    park.addNewGuest(guest);
-    park.addNewGuest(guest);
-    park.addNewGuest(guest);
+    park.addNewGuest(guest1);
+    park.addNewGuest(guest2);
+    park.addNewGuest(guest3);
+    park.addNewGuest(guest4);
     assertEquals(4, park.guestsCount());
     park.evacuate();
     assertEquals(0, park.guestsCount());
