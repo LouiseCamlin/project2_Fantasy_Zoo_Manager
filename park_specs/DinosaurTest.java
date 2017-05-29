@@ -9,6 +9,7 @@ public class DinosaurTest {
   Diplodocus diplodocus;
   Plant plant;
   Guest guest;
+  Goat goat;
 
   @Before
   public void before(){
@@ -53,6 +54,13 @@ public class DinosaurTest {
   @Test
   public void canNotEatPlants(){
     tRex.eatPlant(plant);
+    assertEquals(0, tRex.foodCount());
+  }
+
+  @Test
+  public void canPoop() {
+    tRex.eatGoat(goat);
+    tRex.poop();
     assertEquals(0, tRex.foodCount());
   }
 

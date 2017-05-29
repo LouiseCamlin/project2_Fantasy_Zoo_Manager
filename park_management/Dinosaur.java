@@ -59,6 +59,10 @@ public abstract class Dinosaur{
     return this.belly.size();
   }
 
+  public void poop() {
+    this.belly.clear();
+  }
+
 
 
   
