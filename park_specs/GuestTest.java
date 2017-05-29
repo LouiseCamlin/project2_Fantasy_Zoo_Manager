@@ -13,13 +13,16 @@ public class GuestTest {
     guest1 = new Guest("Irma", 50);
     guest2 = new Guest("Liam", 20);
     guest3 = new Guest("Paddy", 43);
-
   }
-
 
   @Test
   public void canGetGuestName(){
     assertEquals("Irma", guest1.guestName());
+  }
+
+  @Test 
+  public void canGetfunds(){
+    assertEquals(43, guest3.getFunds());
   }
 
 

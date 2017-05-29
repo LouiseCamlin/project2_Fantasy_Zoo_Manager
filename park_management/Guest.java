@@ -14,6 +14,10 @@ public class Guest implements Edible {
     return this.name;
   }
 
+  public int getFunds(){
+    return this.funds;
+  }
+
 
   
 }
