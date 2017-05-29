@@ -10,20 +10,21 @@ public class ParkTest {
   Guest guest2;
   Guest guest3;
   Guest guest4;
+  Guest guest5;
 
   @Before
   public void before(){
     guest1 = new Guest("Irma", 50);
-    guest2 = new Guest("Liam", 20);
+    guest2 = new Guest("Liam", 30);
     guest3 = new Guest("Paddy", 43);
     guest4 = new Guest("Louise", 25);
+    guest5 = new Guest("Paul", 5);
     park = new Park(25);
   }
 
 
   @Test
   public void canAddEnclosure(){
-    
     Enclosure enclosure = new Enclosure();
     park.addNewEnclosure(enclosure);
     assertEquals(1, park.enclosureCount());
@@ -76,6 +77,14 @@ public class ParkTest {
   public void canGetEntryFee() {
     assertEquals(25, park.getEntryFee());
   }
+
+  @Test
+  public void poorPeopleCannotEnter() {
+    park.addNewGuest(guest5);
+    assertEquals(0, park.guestsCount());
+  }
+
+
 
 
 
