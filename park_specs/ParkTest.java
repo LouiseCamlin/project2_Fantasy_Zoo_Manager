@@ -9,7 +9,6 @@ public class ParkTest {
   Guest guests;
 
 
-
   @Test
   public void canAddEnclosure(){
     Park park = new Park();
@@ -55,6 +54,19 @@ public class ParkTest {
     park.addNewGuest(guest);
     park.addNewGuest(guest);
     park.removeGuest(1);
+  }
+
+  @Test 
+  public void canEvacuatePark() {
+    Park park = new Park();
+    Guest guest = new Guest();
+    park.addNewGuest(guest);
+    park.addNewGuest(guest);
+    park.addNewGuest(guest);
+    park.addNewGuest(guest);
+    assertEquals(4, park.guestsCount());
+    park.evacuate();
+    assertEquals(0, park.guestsCount());
   }
 
 

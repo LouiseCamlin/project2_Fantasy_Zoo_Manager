@@ -36,6 +36,10 @@ public class Park{
     this.guests.remove(0);
   }
 
+  public void evacuate() {
+    this.guests.clear();
+  }
+
 
 
 }
