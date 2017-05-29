@@ -32,6 +32,10 @@ public class Park{
     return this.guests.size();
   }
 
+  public void removeGuest(int guest) {
+    this.guests.remove(0);
+  }
+
 
 
 }

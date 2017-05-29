@@ -37,6 +37,26 @@ public class ParkTest {
     assertEquals(1, park.guestsCount());
   }
 
+  @Test
+  public void canHaveMoreThanOneGuest() {
+    Park park = new Park();
+    Guest guest = new Guest();
+    park.addNewGuest(guest);
+    park.addNewGuest(guest);
+    park.addNewGuest(guest);
+    park.addNewGuest(guest);
+    assertEquals(4, park.guestsCount());
+  }
+
+  @Test
+  public void canRemoveGuestByIndex() {
+    Park park = new Park();
+    Guest guest = new Guest();
+    park.addNewGuest(guest);
+    park.addNewGuest(guest);
+    park.removeGuest(1);
+  }
+
 
 
 }
