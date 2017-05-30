@@ -19,7 +19,7 @@ public class ParkTest {
     guest3 = new Guest("Paddy", 43);
     guest4 = new Guest("Louise", 25);
     guest5 = new Guest("Paul", 5);
-    park = new Park(25);
+    park = new Park(25, 0);
   }
 
 
@@ -82,6 +82,13 @@ public class ParkTest {
   public void poorPeopleCannotEnter() {
     park.addNewGuest(guest5);
     assertEquals(0, park.guestsCount());
+  }
+
+  @Test
+  public void canTakeMoneyFromCustomers() {
+    park.addNewGuest(guest1);
+    assertEquals(1, park.guestsCount());
+    // assertEquals(25, guest1.getFunds());
   }
 
 

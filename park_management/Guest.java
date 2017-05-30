@@ -18,6 +18,10 @@ public class Guest implements Edible {
     return this.funds;
   }
 
+  public int payEntryFee(int newFunds){
+    return this.funds -= newFunds;
+  }
+
 
   
 }

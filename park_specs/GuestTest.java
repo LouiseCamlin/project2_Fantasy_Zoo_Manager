@@ -25,5 +25,11 @@ public class GuestTest {
     assertEquals(43, guest3.getFunds());
   }
 
+  @Test
+  public void canSetfunds(){
+    guest1.payEntryFee(25);
+    assertEquals(25, guest1.getFunds());
+  }
+
 
 }
