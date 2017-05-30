@@ -36,7 +36,6 @@ public class Park{
     } else {
       System.out.println("Sorry, " + guest.guestName() + " you don't have enough money for entry");
     }
-    
   }
 
   public int guestsCount() {
@@ -62,6 +61,8 @@ public class Park{
   public int takeMoney(int newProfit) {
     return this.profit += newProfit;
   }
+
+
 
 
 

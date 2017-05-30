@@ -34,6 +34,11 @@ public class DinosaurTest {
   }
 
   @Test
+  public void canGetStatus() {
+    assertEquals(true, tRex.getStatus());
+  }
+
+  @Test
   public void canEatGuest(){
     tRex.eatGuest(guest);
     assertEquals(1, tRex.foodCount());

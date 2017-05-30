@@ -63,6 +63,10 @@ public abstract class Dinosaur{
     this.belly.clear();
   }
 
+  public boolean getStatus() {
+    return this.carnivore;
+  }
+
 
 
   
