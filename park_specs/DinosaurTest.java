@@ -36,6 +36,7 @@ public class DinosaurTest {
   @Test
   public void canGetStatus() {
     assertEquals(true, tRex.getStatus());
+    assertEquals(false, diplodocus.getStatus());
   }
 
   @Test
