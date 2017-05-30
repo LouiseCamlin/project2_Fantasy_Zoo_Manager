@@ -35,7 +35,15 @@ public class EnclosureTest {
     assertEquals(2, enclosure.getNumberOfDinos());
   }
 
-  
+  @Test
+  public void canNotAddTrex() {
+    Enclosure enclosure = new Enclosure();
+    Dinosaur blue = new Velociraptor ("Blue", 10, 10);
+    Dinosaur rex = new TRex ("Alex", 5, 20);
+    enclosure.addDinosaur(blue);
+    enclosure.addDinosaur(rex);
+    assertEquals(1, enclosure.getNumberOfDinos());
+  }
 
 
 }
