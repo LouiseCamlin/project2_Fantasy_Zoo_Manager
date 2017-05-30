@@ -28,10 +28,10 @@ public class Park{
     this.enclosures.clear();
   }
 
-  public void addNewGuest(Guest guest) {
+  public void addNewGuest(Guest guest, Park park) {
     if (guest.getFunds() >= this.entryFee) {
-      // guest.payEntryFee(entryFee);
-      // park.takeMoney(entryFee);
+      guest.payEntryFee(entryFee);
+      park.takeMoney(entryFee);
       this.guests.add(guest);
     } else {
       System.out.println("Sorry, " + guest.guestName() + " you don't have enough money for entry");

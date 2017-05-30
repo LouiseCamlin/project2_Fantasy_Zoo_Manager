@@ -42,32 +42,32 @@ public class ParkTest {
 
   @Test
   public void canAddGuests() {
-    park.addNewGuest(guest1);
+    park.addNewGuest(guest1, park);
     assertEquals(1, park.guestsCount());
   }
 
   @Test
   public void canHaveMoreThanOneGuest() {
-    park.addNewGuest(guest1);
-    park.addNewGuest(guest2);
-    park.addNewGuest(guest3);
-    park.addNewGuest(guest4);
+    park.addNewGuest(guest1, park);
+    park.addNewGuest(guest2, park);
+    park.addNewGuest(guest3, park);
+    park.addNewGuest(guest4, park);
     assertEquals(4, park.guestsCount());
   }
 
   @Test
   public void canRemoveGuestByIndex() {
-    park.addNewGuest(guest1);
-    park.addNewGuest(guest2);
+    park.addNewGuest(guest1, park);
+    park.addNewGuest(guest2, park);
     park.removeGuest(1);
   }
 
   @Test 
   public void canEvacuatePark() {
-    park.addNewGuest(guest1);
-    park.addNewGuest(guest2);
-    park.addNewGuest(guest3);
-    park.addNewGuest(guest4);
+    park.addNewGuest(guest1, park);
+    park.addNewGuest(guest2, park);
+    park.addNewGuest(guest3, park);
+    park.addNewGuest(guest4, park);
     assertEquals(4, park.guestsCount());
     park.evacuate();
     assertEquals(0, park.guestsCount());
@@ -80,7 +80,7 @@ public class ParkTest {
 
   @Test
   public void poorPeopleCannotEnter() {
-    park.addNewGuest(guest5);
+    park.addNewGuest(guest5, park);
     assertEquals(0, park.guestsCount());
   }
 
@@ -88,6 +88,14 @@ public class ParkTest {
   public void canTakeMoneyFromCustomers() {
     park.takeMoney(25);
     assertEquals(25, park.getProfit());
+  }
+
+  @Test
+  public void canDeffinitelyAddGuestToPark() {
+    park.addNewGuest(guest1, park);
+    assertEquals(25, park.getProfit());
+    assertEquals(25, guest1.getFunds());
+    assertEquals(1, park.guestsCount());
   }
 
 
