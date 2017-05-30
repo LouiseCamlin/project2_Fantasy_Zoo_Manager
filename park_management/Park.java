@@ -30,11 +30,9 @@ public class Park{
 
   public void addNewGuest(Guest guest) {
     if (guest.getFunds() >= this.entryFee) {
-      // int funds = guest.getFunds();
-      // funds -= entryFee;
-      // funds = guest.getFunds();
+      // guest.payEntryFee(entryFee);
+      // park.takeMoney(entryFee);
       this.guests.add(guest);
-
     } else {
       System.out.println("Sorry, " + guest.guestName() + " you don't have enough money for entry");
     }
@@ -55,6 +53,14 @@ public class Park{
 
   public int getEntryFee(){
     return this.entryFee;
+  }
+
+  public int getProfit(){
+    return this.profit;
+  }
+
+  public int takeMoney(int newProfit) {
+    return this.profit += newProfit;
   }
 
 

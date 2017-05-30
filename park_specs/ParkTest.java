@@ -86,9 +86,8 @@ public class ParkTest {
 
   @Test
   public void canTakeMoneyFromCustomers() {
-    park.addNewGuest(guest1);
-    assertEquals(1, park.guestsCount());
-    // assertEquals(25, guest1.getFunds());
+    park.takeMoney(25);
+    assertEquals(25, park.getProfit());
   }
 
 
