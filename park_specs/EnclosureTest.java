@@ -10,6 +10,8 @@ public class EnclosureTest {
   Dinosaur delta;
   Dinosaur rex;
   Edible edible;
+  Goat goat;
+  Plant plant;
 
   @Before
   public void before() {
@@ -50,6 +52,14 @@ public class EnclosureTest {
   @Test
   public void enclosureCanAddFood(){
     enclosure.getFood(edible);
+    assertEquals(1, enclosure.foodLevel());
+  }
+
+  @Test
+  public void canFeedDinosaur() {
+    enclosure.getFood(goat);
+    enclosure.getFood(plant);
+    enclosure.feedDinosaur(goat, plant, blue);
     assertEquals(1, enclosure.foodLevel());
   }
 

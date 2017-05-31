@@ -9,21 +9,21 @@ public class Enclosure {
     private ArrayList<Edible> food;
 
     public Enclosure() {
-        dinosaurs = new HashMap<String, Dinosaur>();
-        food = new ArrayList<Edible>();
+        this.dinosaurs = new HashMap<String, Dinosaur>();
+        this.food = new ArrayList<Edible>();
     }
 
 
     public HashMap<String, Dinosaur> getDinosaurs(){
-        return dinosaurs;
+        return this.dinosaurs;
     }
 
     public int getNumberOfDinos() {
-        return dinosaurs.size();
+        return this.dinosaurs.size();
     }
 
     public void removeDinosaur(Dinosaur dinosaur){
-        dinosaurs.remove(dinosaur.getName(), dinosaur);
+        this.dinosaurs.remove(dinosaur.getName(), dinosaur);
     }
 
     public void addDinosaur(Dinosaur newDinosaur){
@@ -46,6 +46,21 @@ public class Enclosure {
     public int foodLevel() {
         return this.food.size();
     }
+
+    public void feedDinosaur(Edible goat, Edible plant, Dinosaur dinosaur) {
+        if (food.size() == 0) {
+            System.out.println("There is no food available");
+            return;
+        }
+        if (dinosaur.getStatus() == true) {
+            this.food.remove(goat);
+        } else {
+            this.food.remove(plant);
+        }
+        
+    }
+
+    
 
 
 }
