@@ -60,6 +60,7 @@ public class ParkTest {
     park.addNewGuest(guest1, park);
     park.addNewGuest(guest2, park);
     park.removeGuest(1);
+    assertEquals(1, park.guestsCount());
   }
 
   @Test 
