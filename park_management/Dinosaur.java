@@ -67,4 +67,12 @@ public abstract class Dinosaur{
     return this.carnivore;
   }
 
+  public void rampage(Guest guest, Park park) {
+    System.out.println("Oh no " + name + " has escaped and is rampaging!!");
+    guest = park.getGuests().get(0);
+    eatGuest(guest);
+    System.out.println(name + " has eaten " + guest.guestName());
+
+  }
+
 }

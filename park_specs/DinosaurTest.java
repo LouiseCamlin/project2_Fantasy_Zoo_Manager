@@ -10,6 +10,7 @@ public class DinosaurTest {
   Plant plant;
   Guest guest;
   Goat goat;
+  Park park;
 
   @Before
   public void before(){
@@ -68,6 +69,16 @@ public class DinosaurTest {
     tRex.eatGoat(goat);
     tRex.poop();
     assertEquals(0, tRex.foodCount());
+  }
+
+  @Test
+  public void canRampage() {
+    Park park = new Park(23, 23);
+    Guest guest1 = new Guest("Matthew", 43);
+
+    park.addNewGuest(guest1, park);
+    tRex.rampage(guest1, park);
+    assertEquals(1, tRex.foodCount());
   }
 
  
