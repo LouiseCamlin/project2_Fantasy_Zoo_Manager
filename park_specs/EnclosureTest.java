@@ -57,11 +57,15 @@ public class EnclosureTest {
 
   @Test
   public void canFeedDinosaur() {
+    enclosure.feedDinosaur(goat, plant, blue);
+    assertEquals(0, enclosure.foodLevel());
     enclosure.getFood(goat);
     enclosure.getFood(plant);
     enclosure.feedDinosaur(goat, plant, blue);
     assertEquals(1, enclosure.foodLevel());
   }
+
+
 
 
 }

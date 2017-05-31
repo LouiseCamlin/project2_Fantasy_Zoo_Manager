@@ -16,6 +16,10 @@ public class Park{
     this.profit = 0;
   }
 
+  public ArrayList<Enclosure> getEnclosures(){
+    return this.enclosures;
+  }
+
   public int enclosureCount(){
     return this.enclosures.size();
   }
@@ -31,8 +35,9 @@ public class Park{
   public void addNewGuest(Guest guest, Park park) {
     if (guest.getFunds() >= this.entryFee) {
       guest.payEntryFee(entryFee);
-      park.takeMoney(entryFee);
+      this.takeMoney(entryFee);
       this.guests.add(guest);
+      System.out.println(guest.guestName() + " entered the park and has " + guest.getFunds() + " pounds left");
     } else {
       System.out.println("Sorry, " + guest.guestName() + " you don't have enough money for entry");
     }
@@ -40,6 +45,10 @@ public class Park{
 
   public int guestsCount() {
     return this.guests.size();
+  }
+
+  public ArrayList<Guest> getGuests(){
+    return this.guests;
   }
 
   public void removeGuest(int guest) {
