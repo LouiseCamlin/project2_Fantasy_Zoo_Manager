@@ -67,12 +67,4 @@ public abstract class Dinosaur{
     return this.carnivore;
   }
 
-
-
-
-  
-
-
-
-
 }
