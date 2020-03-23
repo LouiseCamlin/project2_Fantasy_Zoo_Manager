@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public abstract class Dinosaur{
 
-  private String name;
+  private String name; // What's in a name?
   private int threatLevel;
   private int hunger;
   private ArrayList<Edible> belly;
