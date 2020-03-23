@@ -9,7 +9,7 @@ public abstract class Dinosaur{
   private int threatLevel;
   private int hunger; // very
   private ArrayList<Edible> belly;
-  public boolean carnivore;
+  public boolean carnivore; // try 'isCarnivore'
 
 
   public Dinosaur (String name, int threatLevel, int hunger){
