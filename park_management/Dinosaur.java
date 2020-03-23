@@ -7,7 +7,7 @@ public abstract class Dinosaur{
 
   private String name; // What's in a name?
   private int threatLevel;
-  private int hunger;
+  private int hunger; // very
   private ArrayList<Edible> belly;
   public boolean carnivore;
 
